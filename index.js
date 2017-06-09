@@ -1,7 +1,6 @@
 'use strict';
 var childCompiler = require('./lib/compiler.js');
 var assert = require('assert');
-var _ = require('lodash');
 var fs = require('fs');
 var path = require('path');
 
@@ -11,20 +10,24 @@ function FaviconsWebpackPlugin (options) {
   }
   assert(typeof options === 'object', 'FaviconsWebpackPlugin options are required');
   assert(options.logo, 'An input file is required');
-  this.options = _.extend({
+  this.options = Object.assign({
     prefix: 'icons-[hash]/',
     emitStats: false,
     statsFilename: 'iconstats-[hash].json',
     persistentCache: true,
-    inject: true,
-    manifest: false,
-    background: '#fff'
+    inject: true
   }, options);
-  this.options.icons = _.extend({
+
+  this.options.config = Object.assign({
+    appleStatusBarStyle: 'black-translucent',
+    background: '#fff',
+    theme_color: '#fff',
+  }, options.config);
+
+  this.options.config.icons = Object.assign({
     android: true,
     appleIcon: true,
     appleStartup: true,
-    appleStatusBarStyle: 'black-translucent',
     coast: false,
     favicons: true,
     firefox: true,
@@ -32,7 +35,7 @@ function FaviconsWebpackPlugin (options) {
     twitter: false,
     yandex: false,
     windows: false
-  }, this.options.icons);
+  }, this.options.config.icons);
 }
 
 FaviconsWebpackPlugin.prototype.apply = function (compiler) {

@@ -6,7 +6,7 @@ Allows to use the [favicons](https://github.com/haydenbleasel/favicons) generato
 
 Installation
 ------------
-You must be running webpack on node 0.12.x or higher
+You must be running webpack on node 4.4.x or higher
 
 Install the plugin with npm:
 ```shell
@@ -63,24 +63,27 @@ plugins: [
     persistentCache: true,
     // Inject the html into the html-webpack-plugin
     inject: true,
-    // favicon background color (see https://github.com/haydenbleasel/favicons#usage)
-    background: '#fff',
-    // favicon app title (see https://github.com/haydenbleasel/favicons#usage)
-    title: 'Webpack App',
-
-    // which icons should be generated (see https://github.com/haydenbleasel/favicons#usage)
-    icons: {
-      android: true,
-      appleIcon: true,
-      appleStartup: true,
+    // favicons config (see https://github.com/haydenbleasel/favicons#usage)
+    config: {
+      appName: 'App Name',
+      appDescription: 'App description',
       appleStatusBarStyle: 'black-translucent',
-      coast: false,
-      favicons: true,
-      firefox: true,
-      opengraph: false,
-      twitter: false,
-      yandex: false,
-      windows: false
+      background: "#fff",
+      theme_color: "#fff",
+      lang: 'en-US',
+      display: "standalone",
+      orientation: "portrait",
+      start_url: "/?homescreen=1",
+      icons: {
+        android: true,              // Create Android homescreen icon. `boolean` or `{ offset, background, shadow }`
+        appleIcon: true,            // Create Apple touch icons. `boolean` or `{ offset, background }`
+        appleStartup: true,         // Create Apple startup images. `boolean` or `{ offset, background }`
+        coast: { offset: 25 },      // Create Opera Coast icon with offset 25%. `boolean` or `{ offset, background }`
+        favicons: true,             // Create regular favicons. `boolean`
+        firefox: true,              // Create Firefox OS icons. `boolean` or `{ offset, background }`
+        windows: true,              // Create Windows 8 tile icons. `boolean` or `{ background }`
+        yandex: true                // Create Yandex browser icon. `boolean` or `{ background }`
+      }
     }
   })
 ]
