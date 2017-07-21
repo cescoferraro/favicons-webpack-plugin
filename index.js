@@ -22,6 +22,7 @@ function FaviconsWebpackPlugin (options) {
     appleStatusBarStyle: 'black-translucent',
     background: '#fff',
     theme_color: '#fff',
+    gcm_sender_id: '',
   }, options.config);
 
   this.options.config.icons = Object.assign({
