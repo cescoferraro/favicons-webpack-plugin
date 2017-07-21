@@ -1907,9 +1907,9 @@ fast-levenshtein@~2.0.4:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
 
-"favicons@git+https://github.com/cescoferraro/favicons.git":
-  version "4.8.6"
-  resolved "git+https://github.com/cescoferraro/favicons.git#b3b69d487ca0764b5e8300a0d2f10f0a1a940144"
+favicons@cescoferraro/favicons:
+  version "0.0.1"
+  resolved "https://codeload.github.com/cescoferraro/favicons/tar.gz/1d99f9217eb90518d25cf064a82f665d09f87bc9"
   dependencies:
     async "^1.5.0"
     cheerio "^0.19.0"
