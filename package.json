@@ -48,7 +48,7 @@
     "webpack-dev-middleware": "^1.6.1"
   },
   "dependencies": {
-    "favicons": "git+https://github.com/cescoferraro/favicons.git",
+    "favicons": "cescoferraro/favicons",
     "loader-utils": "^0.2.14",
     "webpack": "^1.13.0"
   }
