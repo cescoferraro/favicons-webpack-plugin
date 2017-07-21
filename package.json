@@ -1,5 +1,5 @@
 {
-  "name": "favicons-webpack-plugin",
+  "name": "favicons-webpack-plugin-cesco",
   "version": "0.0.4",
   "description": "Let webpack generate all your favicons and icons for you",
   "main": "index.js",
@@ -9,7 +9,6 @@
   ],
   "scripts": {
     "lint": "semistandard",
-    "prepublish": "npm run test",
     "posttest": "npm run lint",
     "test": "ava"
   },
